@@ -9,3 +9,4 @@ title: プルリ・クエスト
 - [城へ行く](/castle/)
 - [砂場へ行く](/sandbox/)
 - [リアク島へ行く](/react/)
+- [山へ行く](/mountain/)
