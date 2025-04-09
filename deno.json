@@ -1,8 +1,16 @@
 {
-  "importMap": "import_map.json",
   "tasks": {
     "build": "deno task lume",
     "serve": "deno task lume -s",
-    "lume": "deno eval \"import 'lume/task.ts'\" --"
+    "lume": "echo \"import 'lume/cli.ts'\" | deno run -A -"
+  },
+  "imports": {
+    "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@f57483a1d5db94ba956525471b96155cda5810fa/",
+    "lume/jsx-runtime": "https://deno.land/x/ssx@v0.1.8/jsx-runtime.ts"
+  },
+  "compilerOptions": {
+    "types": [
+      "lume/types.ts"
+    ]
   }
 }

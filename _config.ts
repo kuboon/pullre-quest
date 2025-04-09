@@ -8,14 +8,15 @@ import jsx from "lume/plugins/jsx.ts";
 const site = lume({
   src: './pages',
   dest: './docs',
-  prettyUrls: 'no-html-extension'
+  prettyUrls: false
 });
-site.data('layout', 'layout.njk');
+site.data('layout', 'layout.vto');
 
 site.use(esbuild());
 site.use(code_highlight());
 site.use(date());
 site.use(inline());
 site.use(jsx());
-site.copy("assets", ".");
+site.add("scripts")
+site.add("assets", ".")
 export default site;
